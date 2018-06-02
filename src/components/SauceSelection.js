@@ -6,15 +6,21 @@ import { selectSauce } from '../actions/pizza'
 export class SauceSelection extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {sauce: 'none'};
+    this.state = {sauce: ''};
 
     this.handleChange = this.handleChange.bind(this);
   }
   
   handleChange(event) {
     let SelectedSauce = event.target.value
-    console.log(SelectedSauce)
-    this.setState({sauce: event.target.value})
+    if(SelectedSauce === this.state.sauce)
+    {
+      this.setState({sauce: ''})
+      this.props.selectSauce('')
+    }
+    //console.log(SelectedSauce, "SELECTED SAUCE")
+    //console.log(this.state.sauce, "STATE SAUCE")
+    this.setState({sauce: SelectedSauce})
     this.props.selectSauce(SelectedSauce)    
   }
 
