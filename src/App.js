@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BaseSelection from './components/BaseSelection'
 import SauceSelection from './components/SauceSelection'
+import ToppingSelection from './components/ToppingSelection'
 import './App.css';
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
         </header>
         <BaseSelection/>
         <SauceSelection />
+        <ToppingSelection />
       </div>
     );
   }
