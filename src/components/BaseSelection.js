@@ -29,25 +29,25 @@ export class BaseSelection extends PureComponent {
       <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
         <div className="radio">
           <label>
-            <input type="radio" value="25cm NY Style" checked={this.state.selectedOption === '25cm NY Style'}/>
+            <input type="radio" value="25cm NY Style" checked={this.state.base === '25cm NY Style'}/>
             25cm NY Style € 8,99
           </label>
       </div>
       <div className="radio">
         <label>
-          <input type="radio" value="30cm NY Style" checked={this.state.selectedOption === '30cm NY Style'}/>
+          <input type="radio" value="30cm NY Style" checked={this.state.base === '30cm NY Style'}/>
           30cm NY Style € 11,49
         </label>
       </div>
       <div className="radio">
         <label>
-          <input type="radio" value="35cm NY Style" checked={this.state.selectedOption === '35cm NY Style'}/>
+          <input type="radio" value="35cm NY Style" checked={this.state.base === '35cm NY Style'}/>
           35cm NY Style € 13,49
         </label>
       </div>
       <div className="radio">
         <label>
-          <input type="radio" value="20cm NY Style" checked={this.state.selectedOption === '20cm NY Style'}/>
+          <input type="radio" value="20cm NY Style" checked={this.state.base === '20cm NY Style'}/>
           20cm NY Style € 6,45
         </label>
       </div>
