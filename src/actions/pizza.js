@@ -2,6 +2,7 @@
 import { SELECT_TURBO, SELECT_BASE, SELECT_TOPPING, SELECT_SAUCE } from './types'
 
 export const selectBase = (base) => {
+  console.log("ACTION CREATOR", base)
   return {
     type: SELECT_BASE,
     payload: {

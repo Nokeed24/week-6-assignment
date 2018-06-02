@@ -13,9 +13,10 @@ export class BaseSelection extends PureComponent {
   }
   
   handleChange(event) {
-    console.log(event.target.value)
-    this.props.selectBase(event.target.value)
-    this.setState({base: event.target.value});
+    let SelectedBase = event.target.value
+    console.log(SelectedBase)
+    this.setState({base: event.target.value})
+    this.props.selectBase(SelectedBase)    
   }
 
   handleSubmit(event) {
