@@ -1,12 +1,11 @@
 // src/actions/pizza.js
 import { SELECT_TURBO, SELECT_BASE, SELECT_TOPPING, SELECT_SAUCE } from './types'
 
-export const selectBase = () => {
+export const selectBase = (base) => {
   return {
     type: SELECT_BASE,
     payload: {
-      word,
-      letters
+      base
     }
   }
 }
@@ -29,7 +28,7 @@ export const selectTopping = (toppings) => {
   }
 }
 
-export const selectTopping = (sauce) => {
+export const selectSauce = (sauce) => {
   return {
     type: SELECT_SAUCE,
     payload: {
