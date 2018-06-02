@@ -1,0 +1,4 @@
+export const SELECT_BASE = 'SELECT_BASE'
+export const SELECT_TURBO = 'SELECT_TURBO'
+export const SELECT_TOPPING = 'SELECT_TOPPING'
+export const SELECT_SAUCE = 'SELECT_SAUCE'
