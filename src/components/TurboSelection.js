@@ -12,25 +12,25 @@ export class TurboSelection extends PureComponent {
   handleChange(event) {
     const turboTrue = event.target.value === 'true' ? true : false
     console.log(turboTrue)
-    //this.setState({turbo: turboTrue})
+    this.setState({turbo: turboTrue})
     this.props.selectTurbo(turboTrue)    
   }
 
   render() {
-    const {turboDD} = this.props
+    const turbo = this.state.turbo
     return (
       <div className="TurboSelection">
       <p>Would you like to benefit from our turbo-drone-delivery for just an extra 10%?</p>
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
         <div className="radio">
           <label>
-            <input type="radio" value="true" checked={turboDD === true} onChange={this.handleChange}/>
+            <input type="radio" value="true" checked={turbo === true} onChange={this.handleChange}/>
             YES
           </label>
       </div>
       <div className="radio">
           <label>
-            <input type="radio" value="false" checked={turboDD === false} onChange={this.handleChange}/>
+            <input type="radio" value="false" checked={turbo === false} onChange={this.handleChange}/>
             NO
           </label>
       </div>

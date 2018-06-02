@@ -22,7 +22,7 @@ export class SauceSelection extends PureComponent {
     return (
       <div className="SauceSelection">
       <h2>SELECT YOUR SAUCE</h2>
-        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+        <form onChange={this.handleChange}>
         <div className="radio">
           <label>
             <input type="radio" value="White sauce" checked={this.state.sauce === 'White sauce'}/>
@@ -53,9 +53,9 @@ export class SauceSelection extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ base }) => ({
-  base
-});
+// const mapStateToProps = ({ base }) => ({
+//   base
+// });
 
 //export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
-export default connect(mapStateToProps, {selectSauce})(SauceSelection)
+export default connect(null, {selectSauce})(SauceSelection)
