@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BaseSelection from './components/BaseSelection'
+import SauceSelection from './components/SauceSelection'
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to New Age Pizza!</h1>
         </header>
         <BaseSelection/>
+        <SauceSelection />
       </div>
     );
   }

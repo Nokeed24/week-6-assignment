@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { selectBase } from '../actions/pizza'
+import './BaseSelection.css'
 
 export class BaseSelection extends PureComponent {
   constructor(props) {
@@ -9,7 +10,6 @@ export class BaseSelection extends PureComponent {
     this.state = {base: 'none'};
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
   
   handleChange(event) {
@@ -19,40 +19,37 @@ export class BaseSelection extends PureComponent {
     this.props.selectBase(SelectedBase)    
   }
 
-  handleSubmit(event) {
-    alert('Your favorite flavor is: ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <div className="BaseSelection">
+      <h2>SELECT YOUR BASE</h2>
+        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+          <div className="radio">
+            <label>
+              <input type="radio" value="25cm NY Style" checked={this.state.base === '25cm NY Style'}/>
+              25cm NY Style € 8,99
+            </label>
+        </div>
         <div className="radio">
           <label>
-            <input type="radio" value="25cm NY Style" checked={this.state.base === '25cm NY Style'}/>
-            25cm NY Style € 8,99
+            <input type="radio" value="30cm NY Style" checked={this.state.base === '30cm NY Style'}/>
+            30cm NY Style € 11,49
           </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input type="radio" value="35cm NY Style" checked={this.state.base === '35cm NY Style'}/>
+            35cm NY Style € 13,49
+          </label>
+        </div>
+        <div className="radio">
+          <label>
+            <input type="radio" value="20cm NY Style" checked={this.state.base === '20cm NY Style'}/>
+            20cm NY Style € 6,45
+          </label>
+        </div>
+        </form>
       </div>
-      <div className="radio">
-        <label>
-          <input type="radio" value="30cm NY Style" checked={this.state.base === '30cm NY Style'}/>
-          30cm NY Style € 11,49
-        </label>
-      </div>
-      <div className="radio">
-        <label>
-          <input type="radio" value="35cm NY Style" checked={this.state.base === '35cm NY Style'}/>
-          35cm NY Style € 13,49
-        </label>
-      </div>
-      <div className="radio">
-        <label>
-          <input type="radio" value="20cm NY Style" checked={this.state.base === '20cm NY Style'}/>
-          20cm NY Style € 6,45
-        </label>
-      </div>
-      <input type="submit" value="Submit" />
-      </form>
     );
   }
 }
