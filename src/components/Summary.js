@@ -5,7 +5,6 @@ import {calculatePrice} from '../lib/logic'
 
 export class Summary extends PureComponent {
   constructor(props) {
-    console.log("CONSTRUCTOR")
     super(props);
     this.state = {totalPrice: 0 };
   }

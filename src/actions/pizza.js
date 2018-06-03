@@ -36,12 +36,3 @@ export const selectSauce = (sauce) => {
     }
   }
 }
-
-export const updatePrice = (price) => {
-  return {
-    type: UPDATE_PRICE,
-    payload: {
-      price
-    }
-  }
-}

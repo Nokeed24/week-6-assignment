@@ -13,19 +13,21 @@ export class ToppingSelection extends PureComponent {
   handleChange(event) {
     let selectedTopping = event.target.value
     let statetoppings = this.state.toppings
-    if (this.state.toppings.includes(selectedTopping)){
-      statetoppings.pop(selectedTopping)
-      console.log(statetoppings, "AFTER POP")
-      this.setState({toppings: statetoppings})  
-      this.props.selectTopping(this.state.toppings) 
+    if (statetoppings.includes(selectedTopping)){
+      const newToppings = statetoppings.filter(topping => topping !== event.target.value)
+      console.log(newToppings, "AFTER POP")
+      this.setState({toppings: newToppings})  
+      this.props.selectTopping(statetoppings) 
+      event.target.value = ''
     }
     else{
       if(statetoppings.length <= 2)
       {
-        statetoppings.push(selectedTopping)
-        console.log(statetoppings, "AFTER PUSH")
-        this.setState({toppings: statetoppings})
-        this.props.selectTopping(this.state.toppings)          
+        const newToppings = [...statetoppings, event.target.value]
+        console.log(newToppings, "AFTER PUSH")
+        this.setState({toppings: newToppings})
+        this.props.selectTopping(newToppings)          
+        event.target.value = ''
       }
       else
       {
@@ -35,7 +37,7 @@ export class ToppingSelection extends PureComponent {
       }
     }
     //this.setState({toppings: statetoppings})
-    console.log(this.state.toppings, "THIS GOES TO STORE")
+    console.log(statetoppings, "THIS GOES TO STORE")
     
   }
 
