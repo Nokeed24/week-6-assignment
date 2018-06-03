@@ -4,10 +4,9 @@ import { selectTopping } from '../actions/pizza'
 
 export class ToppingSelection extends PureComponent {
   constructor(props) {
-    super(props);
-    this.state = {toppings: []};
-
-    this.handleChange = this.handleChange.bind(this);
+    super(props)
+    this.state = {toppings: []}
+    this.handleChange = this.handleChange.bind(this)
   }
   
   handleChange(event) {
@@ -15,66 +14,67 @@ export class ToppingSelection extends PureComponent {
     let statetoppings = this.state.toppings
     if (this.state.toppings.includes(selectedTopping)){
       statetoppings.pop(selectedTopping)
-      this.setState({toppings: statetoppings})
+      console.log(statetoppings, "AFTER POP -----")
+      //this.setState({toppings: statetoppings})   
     }
     else{
-      //console.log(statetoppings.length, "LENGTH")
+      console.log(statetoppings.length, "LENGTH")
       if(statetoppings.length <= 2)
       {
-        statetoppings.push(selectedTopping)
-        this.setState({toppings: statetoppings})
+        statetoppings.push(selectedTopping) 
       }
       
     }
-    //console.log(this.state.toppings)
+    this.setState({toppings: statetoppings})
+    console.log(this.state.toppings, "THIS GOES TO STORE")
     this.props.selectTopping(this.state.toppings)
   }
 
   render() {
-    const statetoppings = this.state.toppings
+    const { toppings } = this.props
     return (
       <div className="ToppingSelection">
         <h2>SELECT YOUR TOPPINGS (3 MAXIMUM)</h2>
-        <form>
-          <div className="radio">
+        <form onChange={this.handleChange}>
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Pineapple" checked={statetoppings.includes("Pineapple")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Pineapple" checked={toppings.includes("Pineapple")} />
               Pineapple
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Corn" checked={statetoppings.includes("Corn")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Corn" checked={toppings.includes("Corn")} />
               Corn
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Olives (green)" checked={statetoppings.includes("Olives (green)")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Olives (green)" checked={toppings.includes("Olives (green)")} />
               Olives (green)
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Red union" checked={statetoppings.includes("Red union")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Red union" checked={toppings.includes("Red union")} />
               Red union 
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Spinach" checked={statetoppings.includes("Spinach")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Spinach" checked={toppings.includes("Spinach")} />
               Spinach
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Cherry tomatoes" checked={statetoppings.includes("Cherry tomatoes")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Cherry tomatoes" checked={toppings.includes("Cherry tomatoes")} />
               Cherry tomatoes
             </label>
           </div>
-          <div className="radio">
+          <div className="checkbox">
             <label>
-              <input type="radio" value="Chicken" checked={statetoppings.includes("Chicken")} onChange={this.handleChange}/>
+              <input type="checkbox" value="Chicken" checked={toppings.includes("Chicken")}/>
               Chicken
             </label>
           </div>
@@ -84,6 +84,9 @@ export class ToppingSelection extends PureComponent {
   }
 }
 
+const mapStateToProps = ({ toppings }) => ({
+  toppings: toppings
+});
 
 //export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
-export default connect(null, {selectTopping})(ToppingSelection)
+export default connect(mapStateToProps, {selectTopping})(ToppingSelection)
