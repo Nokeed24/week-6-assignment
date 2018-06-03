@@ -39,9 +39,4 @@ export class TurboSelection extends PureComponent {
   }
 }
 
-// const mapStateToProps = ({ turboDD }) => ({
-//   turboDD
-// });
-
-//export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
 export default connect(null, {selectTurbo})(TurboSelection)

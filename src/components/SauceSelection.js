@@ -4,10 +4,9 @@ import { selectSauce } from '../actions/pizza'
 
 export class SauceSelection extends PureComponent {
   constructor(props) {
-    super(props);
-    this.state = {sauce: ''};
-
-    this.handleChange = this.handleChange.bind(this);
+    super(props)
+    this.state = {sauce: ''}
+    this.handleChange = this.handleChange.bind(this)
   }
   
   handleChange(event) {
@@ -51,9 +50,4 @@ export class SauceSelection extends PureComponent {
   }
 }
 
-// const mapStateToProps = ({ base }) => ({
-//   base
-// });
-
-//export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
 export default connect(null, {selectSauce})(SauceSelection)
