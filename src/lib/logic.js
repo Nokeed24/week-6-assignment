@@ -46,9 +46,13 @@ export const getSaucePrice = (sauce) => {
 }
 
 export const calculatePrice = (base ,sauce ='',toppings =[],turbo = false) => {
-  const basePrice = bases[base]
+  let basePrice = 0
   let saucePrice = 0
   let totalToppingsCost = 0
+  if(base !== '')
+  {
+    basePrice = bases[base]
+  }
   if(sauce !== '')
   {
     saucePrice = sauces[sauce]
