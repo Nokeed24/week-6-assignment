@@ -11,7 +11,6 @@ export class TurboSelection extends PureComponent {
   
   handleChange(event) {
     const turboTrue = event.target.value === 'true' ? true : false
-    console.log(turboTrue)
     this.setState({turbo: turboTrue})
     this.props.selectTurbo(turboTrue)    
   }

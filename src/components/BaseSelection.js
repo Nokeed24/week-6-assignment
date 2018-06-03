@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { selectBase } from '../actions/pizza'
+import {updatePrice} from '../lib/logic'
 import './BaseSelection.css'
 
 export class BaseSelection extends PureComponent {
@@ -13,16 +14,15 @@ export class BaseSelection extends PureComponent {
   
   handleChange(event) {
     let SelectedBase = event.target.value
-    //console.log(SelectedBase)
     this.setState({base: event.target.value})
-    this.props.selectBase(SelectedBase)    
+    this.props.selectBase(SelectedBase)
   }
 
   render() {
     return (
       <div className="BaseSelection">
       <h2>SELECT YOUR BASE</h2>
-        <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+        <form onChange={this.handleChange}>
           <div className="radio">
             <label>
               <input type="radio" value="25cm NY Style" checked={this.state.base === '25cm NY Style'}/>

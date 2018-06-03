@@ -37,8 +37,6 @@ export const sauces = {
   "Mix it up": 1.5
 }
 
-//toppings.length * 0.5 = totaltoppings cost
-
 export const getBasePrice = (base) => {
   return bases[base]
 }
@@ -61,8 +59,6 @@ export const calculatePrice = (base ,sauce ='',toppings =[],turbo = false) => {
   }
   const priceBeforeDD = basePrice + saucePrice + totalToppingsCost
   const priceWithDD = priceBeforeDD + (priceBeforeDD * 0.1)
-  console.log("LOGIC - TOTAL PRICE: ", priceBeforeDD)
-  console.log("LOGIC - DRONE PRICE: ", priceBeforeDD)
   if(!turbo)
   {
     return priceBeforeDD
