@@ -22,6 +22,15 @@
 // 6. Cherry tomatoes
 // 7. Chicken
 
+export const toppings = [
+  "Pineapple",
+  "Corn",
+  "Olives (green)",
+  "Red onion",
+  "Spinach",
+  "Cherry tomatoes",
+  "Chicken"
+]
 
 export const bases = {
   "25cm NY Style": 8.99,

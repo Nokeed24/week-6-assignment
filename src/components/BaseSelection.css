@@ -5,12 +5,24 @@
   margin: 1px;
 }
 
+form {
+  justify-content: center;
+}
+
 form div {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
 }
 
 input[type="radio"] {
   margin-right: 10px;
-  color: green;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.toppingBox {
+  display: flex;
+  justify-content: center;
 }

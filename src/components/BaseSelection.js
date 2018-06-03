@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { selectBase } from '../actions/pizza'
-import {updatePrice} from '../lib/logic'
 import './BaseSelection.css'
 
 export class BaseSelection extends PureComponent {

@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import BaseSelection from './components/BaseSelection'
-import SauceSelection from './components/SauceSelection'
-import ToppingSelection from './components/ToppingSelection'
 import Configuration from './containers/Configuration'
 import Sum from './containers/Sum'
 import './App.css';

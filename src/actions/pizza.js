@@ -1,5 +1,5 @@
 // src/actions/pizza.js
-import { SELECT_TURBO, SELECT_BASE, SELECT_TOPPING, SELECT_SAUCE, UPDATE_PRICE } from './types'
+import { SELECT_TURBO, SELECT_BASE, SELECT_TOPPING, SELECT_SAUCE } from './types'
 
 export const selectBase = (base) => {
   return {
