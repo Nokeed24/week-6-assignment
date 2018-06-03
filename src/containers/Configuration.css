@@ -1,4 +1,17 @@
 .configuration {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center; 
+}
+
+h2 {
+  margin: 2px;  
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; 
 }

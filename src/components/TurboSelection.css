@@ -1,0 +1,10 @@
+.TurboSelection {
+  border: 1px solid darkgreen;
+  padding: 0px;
+  margin: 1px;
+}
+
+.TurboSelection form {
+  display: flex;
+  flex-direction: row;
+}

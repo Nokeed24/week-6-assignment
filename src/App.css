@@ -20,3 +20,10 @@
   flex-direction: row;
 }
 
+.configuration {
+  width: 50%;
+}
+
+.sum {                                          
+  width: 50%;
+}

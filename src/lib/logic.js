@@ -45,7 +45,7 @@ export const getSaucePrice = (sauce) => {
   return sauces[sauce]
 }
 
-export const calculatePrice = (base ,sauce ='',toppings =[],turbo = false) => {
+export const calculatePrice = (base ,sauce ,toppings, turbo) => {
   let basePrice = 0
   let saucePrice = 0
   let totalToppingsCost = 0

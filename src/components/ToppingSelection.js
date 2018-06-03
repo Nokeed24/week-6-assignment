@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { selectTopping } from '../actions/pizza'
+import './ToppingSelection.css'
 
 export class ToppingSelection extends PureComponent {
   constructor(props) {
@@ -29,7 +30,8 @@ export class ToppingSelection extends PureComponent {
       else
       {
         alert("You can choose a maximum of 3 toppings")
-        event.preventDefault()        
+        event.preventDefault()
+        return        
       }
     }
     //this.setState({toppings: statetoppings})
@@ -41,46 +43,46 @@ export class ToppingSelection extends PureComponent {
     return (
       <div className="ToppingSelection">
         <h2>SELECT YOUR TOPPINGS (3 MAXIMUM)</h2>
-        <form >
+        <form onChange={this.handleChange}>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Pineapple" onChange={this.handleChange}/>
+              <input type="checkbox" value="Pineapple" />
               Pineapple
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Corn" onChange={this.handleChange}/>
+              <input type="checkbox" value="Corn" />
               Corn
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Olives (green)" onChange={this.handleChange}/>
+              <input type="checkbox" value="Olives (green)" />
               Olives (green)
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Red union" onChange={this.handleChange}/>
+              <input type="checkbox" value="Red union" />
               Red union 
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Spinach" onChange={this.handleChange}/>
+              <input type="checkbox" value="Spinach" />
               Spinach
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Cherry tomatoes" onChange={this.handleChange}/>
+              <input type="checkbox" value="Cherry tomatoes" />
               Cherry tomatoes
             </label>
           </div>
           <div className="checkbox">
             <label>
-              <input type="checkbox" value="Chicken" onChange={this.handleChange}/>
+              <input type="checkbox" value="Chicken" />
               Chicken
             </label>
           </div>

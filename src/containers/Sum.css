@@ -1,0 +1,18 @@
+.sum {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.sum .Summary {
+  display: flex;
+  align-self: center;
+  width: 50%;
+}
+
+p{
+  margin: 0;
+  justify-content: space-between;
+}

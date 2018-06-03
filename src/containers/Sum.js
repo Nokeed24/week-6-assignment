@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import Summary from '../components/Summary'
-import './Configuration.css'
+import './Sum.css'
 
 export class Sum extends PureComponent {
 
   render() {
     return (
-      <div className="configuration">
+      <div className="sum">
         <Summary /> 
       </div>
     )
