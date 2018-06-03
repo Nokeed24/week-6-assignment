@@ -18,14 +18,7 @@ export class Summary extends PureComponent {
       <div className="Summary">
         <p>Base Selected:<br></br>{base}</p>
         <p>Sauce: <br></br>{sauce}</p>
-        <p>Toppings:</p>
-        <table className="toppings">
-        <tbody>
-        <tr><td>{toppings[0]}</td></tr>
-        <tr><td>{toppings[1]}</td></tr>
-        <tr><td>{toppings[2]}</td></tr>
-        </tbody>
-        </table>
+        <p>Number of Toppings (3 max, 0,5 each): {toppings.length}</p>
         {/* <ul>{toppings.map((topping) => <li key={topping}>{topping}</li>)}</ul> */}
         <p>Turbo: {turboDD ? <span>YES</span> : <span>NO</span>}</p>
         <p>TOTAL: {isNaN(price) ? 0 : price}</p>
