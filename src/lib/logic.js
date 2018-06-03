@@ -25,7 +25,7 @@
 
 export const bases = {
   "25cm NY Style": 8.99,
-  "2. 30cm NY Style": 11.49,
+  "30cm NY Style": 11.49,
   "35cm NY Style": 13.49,
   "20cm NY Style": 6.45
 }
@@ -51,7 +51,7 @@ export const calculatePrice = (base ,sauce ='',toppings =[],turbo = false) => {
   const basePrice = bases[base]
   let saucePrice = 0
   let totalToppingsCost = 0
-  if(sauce != '')
+  if(sauce !== '')
   {
     saucePrice = sauces[sauce]
   }
