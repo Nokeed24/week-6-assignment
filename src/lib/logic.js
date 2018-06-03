@@ -47,10 +47,18 @@ export const getSaucePrice = (sauce) => {
   return sauces[sauce]
 }
 
-export const calculatePrice = (base,sauce,toppings,turbo) => {
+export const calculatePrice = (base ,sauce ='',toppings =[],turbo = false) => {
   const basePrice = bases[base]
-  const saucePrice = sauces[sauce]
-  const totalToppingsCost = toppings.length * 0.5
+  let saucePrice = 0
+  let totalToppingsCost = 0
+  if(sauce != '')
+  {
+    saucePrice = sauces[sauce]
+  }
+  if(toppings.length > 0)
+  {
+    totalToppingsCost = toppings.length * 0.5
+  }
   const priceBeforeDD = basePrice + saucePrice + totalToppingsCost
   const priceWithDD = priceBeforeDD + (priceBeforeDD * 0.1)
   console.log("LOGIC - TOTAL PRICE: ", priceBeforeDD)
