@@ -15,15 +15,12 @@ export class ToppingSelection extends PureComponent {
     let selectedTopping = event.target.value
     let statetoppings = this.state.toppings
     if (statetoppings.includes(selectedTopping)){
-      console.log("INCLUDES", statetoppings)
       const newToppings = statetoppings.filter(topping => topping !== selectedTopping)
       this.setState({toppings: newToppings})  
       this.props.selectTopping(statetoppings) 
-      console.log("AFTER FILTER", statetoppings)
       event.target.value = ''
     }
     else{
-      console.log("DOES NOT INCLUDE", statetoppings)
       if(statetoppings.length <= 2)
       {
         const newToppings = [...statetoppings, event.target.value]
@@ -47,7 +44,7 @@ export class ToppingSelection extends PureComponent {
         <form >
           {toppings.map(topping => {
               return (
-                <label key ={topping} className="toppingBox">
+                <label key ={topping} className="topping">
                   <input
                     type="checkbox"
                     value={topping}

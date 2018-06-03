@@ -26,10 +26,6 @@ export class Summary extends PureComponent {
 }
 
 const mapStateToProps = ({ base, sauce, toppings, turboDD }) => ({
-  // base: base,
-  // sauce: sauce,
-  // toppings: toppings,
-  // turboDD: turboDD,
   price: calculatePrice(base,sauce,toppings,turboDD)
 });
 

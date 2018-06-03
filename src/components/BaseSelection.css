@@ -1,5 +1,4 @@
 .BaseSelection {
-  /*margin: 5px 0px;*/
   border: 1px solid darkgreen;
   padding-bottom: 5px;
   margin: 1px;
@@ -10,7 +9,6 @@ form {
 }
 
 form div {
-  /* width: 100%; */
   display: flex;
 }
 
@@ -22,7 +20,7 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
-.toppingBox {
+.topping {
   display: flex;
   justify-content: center;
 }

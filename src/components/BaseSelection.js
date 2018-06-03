@@ -52,9 +52,4 @@ export class BaseSelection extends PureComponent {
   }
 }
 
-// const mapStateToProps = ({ base }) => ({
-//   base
-// });
-
-//export default connect(mapStateToProps, mapDispatchToProps)(ItemList);
 export default connect(null, {selectBase})(BaseSelection)
